@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "outDir": "./dist",
+    "paths": {
+      "@app": ["app/"],
+      "@config": ["config/"],
+      "@database": ["database/"]
+    },
+    "rootDirs": ["src"],
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2022"
+  },
+	"exclude": ["node_modules"],
+	"include": ["./src/**/*"]
+}
