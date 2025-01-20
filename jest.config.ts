@@ -6,7 +6,9 @@ export default {
   moduleNameMapper: pathsToModuleNameMapper({
     "@app": ["app/"],
     "@config": ["config/"],
-    "@database": ["database/"]
+    "@database": ["database/"],
+    "@interfaces": ["interfaces/"],
+    "@services": ["services/"]
   }, {
     prefix: '<rootDir>/src/'
   }),

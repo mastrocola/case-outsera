@@ -1,14 +1,27 @@
-import { moviesDB } from '@database'
+
+import { calculateAwardIntervals, loadMovies } from '@services'
 import { Router } from 'express'
 
 const router = Router()
 
 router.get('/movies', async (_, res) => {
-  res.json(await moviesDB.getAllMovies())
+  try {
+    const movies = await loadMovies()
+
+    res.json(movies)
+  } catch (error: any) {
+    res.status(500).json({ error: error.message })
+  }
 })
 
-router.get('/producers/award-intervals', async (_, res) => {
-  res.json(await moviesDB.getProducersAwardIntervals())
+router.get('/producers/awards-intervals', async (_, res) => {
+  try {
+    const awardsIntervals = await calculateAwardIntervals()
+
+    res.json(awardsIntervals)
+  } catch (error: any) {
+    res.status(500).json({ error: error.message })
+  }
 })
 
 export default router

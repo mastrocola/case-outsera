@@ -36,6 +36,10 @@ npm run build
 npm start
 ```
 
+Rotas disponíveis:
+  GET /movies
+  GET /producers/awards-intervals
+
 ## Testes de Integração
 
 Passo a passo para a execução dos testes de integração

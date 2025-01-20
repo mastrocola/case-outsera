@@ -10,7 +10,9 @@
     "paths": {
       "@app": ["app/"],
       "@config": ["config/"],
-      "@database": ["database/"]
+      "@database": ["database/"],
+      "@interfaces": ["interfaces/"],
+      "@services": ["services/"]
     },
     "rootDirs": ["src"],
     "skipLibCheck": true,
