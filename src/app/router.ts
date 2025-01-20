@@ -1,5 +1,5 @@
 
-import { calculateAwardIntervals, loadMovies } from '@services'
+import { calculateAwardsIntervals, loadMovies } from '@services'
 import { Router } from 'express'
 
 const router = Router()
@@ -16,7 +16,7 @@ router.get('/movies', async (_, res) => {
 
 router.get('/producers/awards-intervals', async (_, res) => {
   try {
-    const awardsIntervals = await calculateAwardIntervals()
+    const awardsIntervals = await calculateAwardsIntervals()
 
     res.json(awardsIntervals)
   } catch (error: any) {

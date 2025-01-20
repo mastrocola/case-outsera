@@ -1,7 +1,7 @@
 import { moviesDB } from '@database'
 import { AwardsInterval, ProducersAwardsIntervals } from '@interfaces'
 
-export const calculateAwardIntervals = async (): Promise<ProducersAwardsIntervals> => {
+export const calculateAwardsIntervals = async (): Promise<ProducersAwardsIntervals> => {
   const producersWinners = await moviesDB.getProducersWinners()
   const wins: Record<string, number[]> = {}
 
